@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GBO-Aku monitor</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="topnav">
+    <h1>GBO-Aku monitor Configuration</h1>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card">
+        <form action="/" method="POST">
+          <p>
+            <label for="ssid">SSID</label>
+            <input type="text" id ="ssid" name="ssid"><br>
+            <label for="pass">Password</label>
+            <input type="text" id ="pass" name="pass"><br>
+            <label for="service">GBO MODBUS IP</label>
+            <input type="text" id ="service" name="service" value="192.168.2.12"><br>
+            <label for="apikey">Forecast API KEY</label>
+            <input type="text" id ="apikey" name="apikey" value=""><br>
+            <label for="lat">Latitude</label>
+            <input type="text" id ="lat" name="lat" value="49.195"><br>
+            <label for="lot">Longitude</label>
+            <input type="text" id ="lon" name="lon" value="16.606"><br>
+            <input type ="submit" value ="Submit">
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
