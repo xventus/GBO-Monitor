@@ -28,27 +28,27 @@ konfigurace převodníku pro GBO-AKU viz. https://github.com/xventus/GBO-AKU-NR
 
 Provozováno s GBO-AKU s FW wattrouter 3 fáze. 
 
-# Licence
+##  Licence
 
 pouze pro nekomerční účely
 
-# Zprovoznění
+##  Zprovoznění
 
 
-1, Visual Studio Code + Platformio
-2, v platformio.ini nastavit správný sériový port např. upload_port = /dev/cu.usbserial-015F9939
-3, v /src/constants.h nastavit konstantu gridSize velikost plochy panelů v m2, popř. účinnost v efficiencyOfPanels
-4, nahrát do ESP32 filesytem za pomocí GUI -  Upload Filesystem Image
-5, nahrát vlastní program - Upload
-6, při prvním spuštění se vytvoří AP s názvem `GBO Monitor` nebo součastně stisknout tlačítka A a C
-7, web browser http://192.168.4.100 a vyplnit web formulář
-8, restart
+1. Visual Studio Code + Platformio
+2. v platformio.ini nastavit správný sériový port např. upload_port = /dev/cu.usbserial-015F9939
+3. v /src/constants.h nastavit konstantu gridSize velikost plochy panelů v m2, popř. účinnost v efficiencyOfPanels
+4. nahrát do ESP32 filesytem za pomocí GUI -  Upload Filesystem Image
+5. nahrát vlastní program - Upload
+6. při prvním spuštění se vytvoří AP s názvem `GBO Monitor` nebo součastně stisknout tlačítka A a C
+7. web browser http://192.168.4.100 a vyplnit web formulář
+8. restart
 
 
-# TODO
+##  TODO
  - korekce času GBO přes NTP server
 
-# Screens
+##  Screens
 
 ![display](img/gbo-disp2.png)
 ![web config](img/ap.png)
