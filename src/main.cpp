@@ -84,15 +84,15 @@ void webConfig() {
  * @brief startup
  * 
  */
+
 void setup(void) {
  
  M5.begin();
+ sc.init();
  Beep::init();
  sc.splash().redraw(*gbo.getGBOData());
  Serial.begin(115200);
  Serial.flush();
- 
- delay(1000);
  sc.wifi().redraw(*gbo.getGBOData());
  if (!ifs.init() || !ifs.isRequiredFileExists()) {
      Serial.printf("Invalid file system, please 'Upload Filesystem Image'! \nSTOP\n");
@@ -118,8 +118,6 @@ void setup(void) {
   gskipcycle = 0;
   Beep::bootup();   
 }
-
-
 
 // cycle
 void loop(void) {

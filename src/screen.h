@@ -37,9 +37,10 @@ class Screen {
                      AC,
                      none, 
                      init};
- private:
+
      
    M5GFX   _display;
+    private:
    uint8_t _rotation {0};
    Page    _page {Page::overview};
    LED     _winter;
@@ -74,6 +75,7 @@ class Screen {
        }
     void redraw(const GBOData& gbo);
     Screen&  button(Screen::Btn btn);
+    void init() ;
 
  private:
     void wifiupdate(const GBOData& gbo);

@@ -27,8 +27,23 @@ Screen::Screen() :_winter(&_display,140, 70),
     _k3(&_display,45,200),
     _k4(&_display,80,185),
     _k5(&_display,80,200) {
-        _display.begin();
-    } 
+ } 
+
+ void Screen::init() {
+    _display.begin();
+    
+    if (_display.isEPD()) {
+        _display.setEpdMode(epd_mode_t::epd_fastest);
+        _display.invertDisplay(true);
+        _display.clear(TFT_BLACK);
+    }
+
+    if (_display.width() < _display.height()) {
+     _display.setRotation(_display.getRotation() ^ 1);
+   }
+  
+   _display.startWrite(true);
+ }
 
 Screen&  Screen::button(Screen::Btn btn) {
 
@@ -291,7 +306,7 @@ void Screen::redraw(const GBOData& gbo) {
 
     if (!_display.displayBusy()) {
        
-       _display.startWrite();
+       //_display.startWrite();
        
        if (_page == Page::wifi) {
               wifiupdate(gbo);  
@@ -299,6 +314,6 @@ void Screen::redraw(const GBOData& gbo) {
        if (_page == Page::overview) {
               overviewUpdate(gbo);  
        }
-       _display.endWrite();
+       //_display.endWrite();
     }
 }
